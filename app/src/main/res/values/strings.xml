@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NotificationScheduler</string>
+    <string name="notification_title">Job Service</string>
+    <string name="notification_text">Your Job is running</string>
 </resources>

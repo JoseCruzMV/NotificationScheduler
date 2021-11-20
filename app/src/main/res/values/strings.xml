@@ -2,4 +2,10 @@
     <string name="app_name">NotificationScheduler</string>
     <string name="notification_title">Job Service</string>
     <string name="notification_text">Your Job is running</string>
+    <string name="network_type_required">Network Type Required</string>
+    <string name="none_radio_button">None</string>
+    <string name="any_radio_button">Any</string>
+    <string name="wifi_radio_button">Wifi</string>
+    <string name="schedule_job_button">Schedule Job</string>
+    <string name="cancel_jobs_button">Cancel Jobs</string>
 </resources>

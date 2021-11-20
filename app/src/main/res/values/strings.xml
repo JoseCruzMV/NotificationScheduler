@@ -14,4 +14,6 @@
     <string name="requieres_label">Requieres</string>
     <string name="device_idle_switch">Device Idle</string>
     <string name="device_charging_swtich">Device Charging</string>
+    <string name="override_deadine_label">Override Deadine:</string>
+    <string name="not_set_label">Not Set</string>
 </resources>

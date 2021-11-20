@@ -8,4 +8,7 @@
     <string name="wifi_radio_button">Wifi</string>
     <string name="schedule_job_button">Schedule Job</string>
     <string name="cancel_jobs_button">Cancel Jobs</string>
+    <string name="toast_job">Job Scheadule, job will run when the constraints are met</string>
+    <string name="jobs_cancelled_toast">Jobs cancelled</string>
+    <string name="no_constraint_toast">Please set at least one constraint</string>
 </resources>

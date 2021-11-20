@@ -11,4 +11,7 @@
     <string name="toast_job">Job Scheadule, job will run when the constraints are met</string>
     <string name="jobs_cancelled_toast">Jobs cancelled</string>
     <string name="no_constraint_toast">Please set at least one constraint</string>
+    <string name="requieres_label">Requieres</string>
+    <string name="device_idle_switch">Device Idle</string>
+    <string name="device_charging_swtich">Device Charging</string>
 </resources>

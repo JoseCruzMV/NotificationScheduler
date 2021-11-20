@@ -40,6 +40,35 @@
 
     </RadioGroup>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/four_dp_margin"
+        android:text="@string/requieres_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/four_dp_margin"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/idleSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/device_idle_switch" />
+
+        <Switch
+            android:id="@+id/chargingSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/device_charging_swtich" />
+
+
+    </LinearLayout>
+
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_margin="@dimen/four_dp_margin"
-        android:text="@string/cancel_jobs_button"
-        android:onClick="cancelJobs"/>
+        android:onClick="cancelJobs"
+        android:text="@string/cancel_jobs_button" />
 
 </LinearLayout>

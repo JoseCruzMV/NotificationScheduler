@@ -8,6 +8,7 @@ import android.content.ComponentName;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,11 +16,17 @@ public class MainActivity extends AppCompatActivity {
 
     private JobScheduler mScheduler;
 
+    private Switch mDeviceIdleSwitch;
+    private Switch mDeviceChargingSwitch;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mDeviceIdleSwitch = findViewById(R.id.idleSwitch);
+        mDeviceChargingSwitch = findViewById(R.id.chargingSwitch);
     }
 
     public void scheduleJob(View view) {
@@ -44,9 +51,12 @@ public class MainActivity extends AppCompatActivity {
         ComponentName serviceName = new ComponentName(getPackageName(),
                 NotificationJobService.class.getName());
         JobInfo.Builder builder = new JobInfo.Builder(JOB_ID, serviceName)
-                .setRequiredNetworkType(selectedNetworkOption);
+                .setRequiredNetworkType(selectedNetworkOption)
+                .setRequiresDeviceIdle(mDeviceIdleSwitch.isChecked())
+                .setRequiresCharging(mDeviceChargingSwitch.isChecked());
 
-        boolean constrainSet = selectedNetworkOption != JobInfo.NETWORK_TYPE_NONE;
+        boolean constrainSet = (selectedNetworkOption != JobInfo.NETWORK_TYPE_NONE)
+                || mDeviceChargingSwitch.isChecked() || mDeviceIdleSwitch.isChecked();
         if (constrainSet) {
             JobInfo myJobInfo = builder.build();
             mScheduler.schedule(myJobInfo);
